@@ -1,2 +1,28 @@
 # hooks_optimize_image_on_the_fly
-This hooks allow you to optimize your jpg and png image on the fly without lost on your quality image when you save a product image
+
+This hook allows you to optimize your jpg and png image on the fly without lost on your quality image.
+
+It works on product files when you insert a new image or when you insert a gallery image
+ 
+
+TiniFy uses smart lossy compression techniques to reduce the file size of your PNG files. By selectively decreasing the number of colours in the image, fewer bytes are required to store the data. The effect is nearly invisible but it makes a very large difference in file size!
+
+TiniFy is free for the first 500 images per month
+
+
+Important Note :
+
+Copy the hooks_tinyfy_optimize_image_on_the_fly.json into ClicShopping/Work/Cache/Github
+
+licence  : GPL 2 - MIT
+
+Install :
+
+Go https://tinypng.com/ and create an account to finding your API
+
+In Design / Design - Configuration / Image : Insert your API
+
+See Marketplace for all informations
+Marketplace link : https://www.clicshopping.org/forum/files/file/61-hooks_optimize_image_on_the_fly/
+
+![image](https://github.com/ClicShoppingOfficialModulesV3/hooks_optimize_image_on_the_fly/blob/master/ModuleInfosJson/image.png)
