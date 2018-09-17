@@ -23,6 +23,5 @@ Go https://tinypng.com/ and create an account to finding your API
 In Design / Design - Configuration / Image : Insert your API
 
 See Marketplace for all informations
-Marketplace link : https://www.clicshopping.org/forum/files/file/61-hooks_optimize_image_on_the_fly/
 
 ![image](https://github.com/ClicShoppingOfficialModulesV3/hooks_optimize_image_on_the_fly/blob/master/ModuleInfosJson/image.png)
