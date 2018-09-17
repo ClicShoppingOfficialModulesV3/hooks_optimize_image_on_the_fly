@@ -2,9 +2,9 @@
   "title":			"hooks_tinyfy_optimize_image_on_the_fly",
   "type":           "hooks",
   "vendor":			"Module",
-  "is_free":   "no",
+  "is_free":   "yes",
   "is_core": "no",
-  "website_link_to_sell" : "https://www.clicshopping.org/forum/files/file/61-hooks_optimize_image_on_the_fly/",
+  "website_link_to_sell" : "",
   "version":			1.0,
   "req_core_version":	3.0,
   "license":			"GPL 2 - MIT",
@@ -14,7 +14,7 @@
   "apps_name":          "",
   "type_module":      "Fixe",
   "dependance":       "",
-  "description":        "This hooks allow you to optimize your jpg and png image on the fly without lost on your quality image when you save a product image",
+  "description":        "This hooks allow you to optimize your jpg and png image until 80%, on the fly without lost on your quality image when you save a product image",
   "image":            "ModuleInfosJson/image.png",
 
   "authors": [
