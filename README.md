@@ -17,6 +17,7 @@ Copy the hooks_tinyfy_optimize_image_on_the_fly.json into ClicShopping/Work/Cach
 licence  : GPL 2 - MIT
 
 Install :
+Copy the files inside your directory
 
 Go https://tinypng.com/ and create an account to finding your API
 
