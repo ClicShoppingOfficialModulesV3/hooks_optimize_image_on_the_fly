@@ -1,11 +1,11 @@
 {
-  "title":			"hooks_tinyfy_optimize_image_on_the_fly",
+  "title":			"hooks_optimize_image_on_the_fly",
   "type":           "hooks",
   "vendor":			"Module",
   "is_free":   "yes",
   "is_core": "no",
   "website_link_to_sell" : "",
-  "version":			1.0,
+  "version":			"1.0.1",
   "req_core_version":	3.0,
   "license":			"GPL 2 - MIT",
   "tag":			    "products, image, optimization",
