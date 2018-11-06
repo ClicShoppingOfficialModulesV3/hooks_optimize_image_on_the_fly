@@ -21,7 +21,7 @@
     public function __construct()   {
 
       if (CLICSHOPPING::getSite() != 'ClicShoppingAdmin') {
-        CLICSHOPPING::redirect('CLICSHOPPING::link(null);
+        CLICSHOPPING::redirect();
       }
 
       if (!defined('CONFIGURATION_TINY_API_KEY')){
