@@ -25,4 +25,4 @@ In Design / Design - Configuration / Image : Insert your API
 
 See Marketplace for all informations
 
-![image](https://github.com/ClicShoppingOfficialModulesV3/hooks_optimize_image_on_the_fly/blob/master/ModuleInfosJson/image.png)
+![image](https://github.com/ClicShoppingV3Community/hooks_optimize_image_on_the_fly/blob/master/ModuleInfosJson/image.png)
