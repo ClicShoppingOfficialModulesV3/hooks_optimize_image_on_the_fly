@@ -25,4 +25,16 @@ In Design / Design - Configuration / Image : Insert your API
 
 See Marketplace for all informations
 
+ All informations about the CliCshopping
+
+ Community : https://www.clicshopping.org
+
+ Software : https://github.com/ClicShopping
+
+ Official add on : https://github.com/ClicShoppingOfficialModulesV3
+
+ Community add on : https://github.com/ClicShoppingV3Community
+
+ trademark License info : https://www.clicshopping.org/forum/trademark/ 
+ 
 ![image](https://github.com/ClicShoppingV3Community/hooks_optimize_image_on_the_fly/blob/master/ModuleInfosJson/image.png)
