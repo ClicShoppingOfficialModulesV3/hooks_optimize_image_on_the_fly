@@ -25,7 +25,7 @@ In Design / Design - Configuration / Image : Insert your API
 
 See Marketplace for all informations
 
- All informations about the CliCshopping
+ All informations about the ClicShopping
 
  Community : https://www.clicshopping.org
 
