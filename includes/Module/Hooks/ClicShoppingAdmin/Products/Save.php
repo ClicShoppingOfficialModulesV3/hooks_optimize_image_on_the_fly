@@ -122,7 +122,7 @@
       \Tinify\setKey($this->apiKey);
       \Tinify\validate();
 
-        $QproductImage = $this->db->prepare('select products_image
+        $QproductImage = $this->db->prepare('select image
                                               from :table_products_images
                                               where products_id = :products_id
                                              ');
