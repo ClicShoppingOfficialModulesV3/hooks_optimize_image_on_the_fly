@@ -1,13 +1,13 @@
 <?php
-/**
- *
- *  @copyright 2008 - https://www.clicshopping.org
- *  @Brand : ClicShopping(Tm) at Inpi all right Reserved
- *  @Licence GPL 2 & MIT
- *  @licence MIT - Portion of osCommerce 2.4
- *  @Info : https://www.clicshopping.org/forum/trademark/
- *
- */
+  /**
+   *
+   * @copyright 2008 - https://www.clicshopping.org
+   * @Brand : ClicShopping(Tm) at Inpi all right Reserved
+   * @Licence GPL 2 & MIT
+   * @licence MIT - Portion of osCommerce 2.4
+   * @Info : https://www.clicshopping.org/forum/trademark/
+   *
+   */
 
   namespace ClicShopping\OM\Module\Hooks\ClicShoppingAdmin\Products;
 
@@ -15,16 +15,18 @@
   use ClicShopping\OM\HTML;
   use ClicShopping\OM\Registry;
 
-  class ProductsContentTab5 {
+  class ProductsContentTab5
+  {
     protected $app;
 
-    public function __construct()   {
+    public function __construct()
+    {
 
       if (CLICSHOPPING::getSite() != 'ClicShoppingAdmin') {
         CLICSHOPPING::redirect();
       }
 
-      if (!defined('CONFIGURATION_TINY_API_KEY')){
+      if (!defined('CONFIGURATION_TINY_API_KEY')) {
         $this->InstallAPIKey();
       }
     }
@@ -32,7 +34,8 @@
     /**
      * Install Apy Key
      */
-    private function InstallAPIKey() {
+    private function InstallAPIKey()
+    {
       $CLICSHOPPING_Db = Registry::get('Db');
 
       $CLICSHOPPING_Db->save('configuration', [
@@ -48,12 +51,13 @@
       );
     }
 
-    public function display() {
+    public function display()
+    {
 
       if (!defined('CLICSHOPPING_APP_CATALOG_PRODUCTS_PD_STATUS') || CLICSHOPPING_APP_CATALOG_PRODUCTS_PD_STATUS == 'False') {
         return false;
       }
-      if(!empty(CONFIGURATION_TINY_API_KEY)) {
+      if (!empty(CONFIGURATION_TINY_API_KEY)) {
         $output = '';
 
         $content = '<!-- Image TiniFy Hook start -->';
@@ -82,7 +86,7 @@ $('#tab5ContentRow1').append(
 <!-- ######################## -->
 
 EOD;
-          return $output;
+        return $output;
       }
     }
   }
