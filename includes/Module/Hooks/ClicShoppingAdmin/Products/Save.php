@@ -41,9 +41,12 @@
 
       if (!isset($fileParts['filename'])) {
         $fileParts['filename'] = substr($fileParts['basename'], 0, strrpos($fileParts['basename'], '.'));
+        $extension = $fileParts['extension'];
+      } else {
+        $extension = $fileParts['extension'];
       }
 
-      return $fileParts['extension'];
+      return $extension;
     }
 
     private function getProductsId()

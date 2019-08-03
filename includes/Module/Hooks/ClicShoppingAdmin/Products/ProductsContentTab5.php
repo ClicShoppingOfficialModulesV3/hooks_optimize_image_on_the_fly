@@ -15,7 +15,7 @@
   use ClicShopping\OM\HTML;
   use ClicShopping\OM\Registry;
 
-  class ProductsContentTab5
+  class tinifyProductsContentTab5
   {
     protected $app;
 
