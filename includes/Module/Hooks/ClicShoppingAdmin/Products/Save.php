@@ -22,6 +22,7 @@
     protected $app;
     protected $id;
     protected $db;
+    protected $composer;
 
     public function __construct()
     {
@@ -32,6 +33,7 @@
       $this->template = Registry::get('TemplateAdmin');
       $this->app = Registry::get('Products');
       $this->db = Registry::get('Db');
+      $this->composer = Registry::get('Composer');
       $this->apiKey = CONFIGURATION_TINY_API_KEY;
     }
 
@@ -73,23 +75,21 @@
      */
     private function ProductsImage()
     {
-      if ((isset($_POST['products_image']) && !is_null($_POST['products_image']) && !empty($_POST['products_image'])) && isset($_POST['tinyfy_products_image'])) {
-        require_once(CLICSHOPPING::getConfig('dir_root', 'Shop') . 'ext/api/tinify/vendor/autoload.php');
+      $Qproducts = $this->db->prepare('select products_image,
+                                              products_image_zoom,
+                                              products_image_medium
+                                      from :table_products
+                                      where products_id = :products_id
+                                     ');
 
-        \Tinify\setKey($this->apiKey);
-        \Tinify\validate();
+      $Qproducts->bindInt(':products_id', $this->getProductsId());
+      $Qproducts->execute();
 
-        $Qproducts = $this->db->prepare('select products_image,
-                                                products_image_zoom,
-                                                products_image_medium
-                                        from :table_products
-                                        where products_id = :products_id
-                                       ');
+      if (!empty($Qproducts->value('products_image')) ||!is_null($Qproducts->value('products_image'))) {
+          \Tinify\setKey($this->apiKey);
+          \Tinify\validate();
 
-        $Qproducts->bindInt(':products_id', $this->getProductsId());
-        $Qproducts->execute();
-
-        // big image
+          // big image
         $original_big_image = $this->template->getDirectoryPathTemplateShopImages() . $Qproducts->value('products_image_zoom');
         if (file_exists($original_big_image)) {
           if ($this->getImageExtansion($original_big_image) == 'jpg' || $this->getImageExtansion($original_big_image) == 'png' || $this->getImageExtansion($original_big_image) == 'jpeg') {
@@ -110,10 +110,12 @@
 
         // small image
         $original_small_image = $this->template->getDirectoryPathTemplateShopImages() . $Qproducts->value('products_image');
+
         if (file_exists($original_small_image)) {
           if ($this->getImageExtansion($original_small_image) == 'jpg' || $this->getImageExtansion($original_small_image) == 'png' || $this->getImageExtansion($original_small_image) == 'jpeg') {
             $sourceData = file_get_contents($original_small_image);
             $resultData = \Tinify\fromBuffer($sourceData)->toBuffer();
+
             file_put_contents($original_small_image, $resultData);
           }
         }
@@ -126,8 +128,6 @@
     private function galleryProductsImage()
     {
       if (isset($_POST['tinyfy_gallery_image'])) {
-        require_once(CLICSHOPPING::getConfig('dir_root', 'Shop') . 'ext/api/tinify/vendor/autoload.php');
-
         \Tinify\setKey($this->apiKey);
         \Tinify\validate();
 
@@ -161,6 +161,10 @@
       if (!empty(CONFIGURATION_TINY_API_KEY)) {
         if (isset($_GET['pID'])) {
           $this->id = HTML::sanitize($_GET['pID']);
+        }
+
+        if ($this->composer->checkLibrayInstalled() === false) {
+          $this->composer->install('tinify/tinify');
         }
 
         $this->ProductsImage();

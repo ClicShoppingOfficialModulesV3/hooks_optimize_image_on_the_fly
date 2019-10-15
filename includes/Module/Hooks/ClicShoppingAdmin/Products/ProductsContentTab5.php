@@ -15,7 +15,7 @@
   use ClicShopping\OM\HTML;
   use ClicShopping\OM\Registry;
 
-  class tinifyProductsContentTab5
+  class ProductsContentTab5
   {
     protected $app;
 
@@ -57,7 +57,7 @@
       if (!defined('CLICSHOPPING_APP_CATALOG_PRODUCTS_PD_STATUS') || CLICSHOPPING_APP_CATALOG_PRODUCTS_PD_STATUS == 'False') {
         return false;
       }
-      if (!empty(CONFIGURATION_TINY_API_KEY)) {
+      if (!empty(CONFIGURATION_TINY_API_KEY) && defined('CONFIGURATION_TINY_API_KEY')) {
         $output = '';
 
         $content = '<!-- Image TiniFy Hook start -->';
