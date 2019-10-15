@@ -11,13 +11,15 @@ TiniFy is free for the first 500 images per month
 
 
 Important Note :
-
-Copy the hooks_tinyfy_optimize_image_on_the_fly.json into ClicShopping/Work/Cache/Github
-
 licence  : GPL 2 - MIT
 
 Install :
 Copy the files inside your directory
+Copy the hooks_tinyfy_optimize_image_on_the_fly.json into ClicShopping/Work/Cache/Github
+Use composer with auto instalation else composer require ('tinify/tinify');  in your shop direcotry
+
+
+
 
 Go https://tinypng.com/ and create an account to finding your API
 
