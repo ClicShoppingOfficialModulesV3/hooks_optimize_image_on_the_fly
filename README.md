@@ -16,7 +16,7 @@ licence  : GPL 2 - MIT
 Install :
 Copy the files inside your directory
 Copy the hooks_tinyfy_optimize_image_on_the_fly.json into ClicShopping/Work/Cache/Github
-Use composer with auto instalation else composer require ('tinify/tinify');  in your shop direcotry
+Use composer with auto instalation else composer require ('tinify/tinify');  in your shop directory in your terminal
 
 
 
