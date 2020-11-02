@@ -18,10 +18,10 @@
   class ProductsContentTab5
   {
     protected $app;
+    protected $InstallAPIKey;
 
     public function __construct()
     {
-
       if (CLICSHOPPING::getSite() != 'ClicShoppingAdmin') {
         CLICSHOPPING::redirect();
       }
@@ -53,13 +53,11 @@
 
     public function display()
     {
-
-      if (!defined('CLICSHOPPING_APP_CATALOG_PRODUCTS_PD_STATUS') || CLICSHOPPING_APP_CATALOG_PRODUCTS_PD_STATUS == 'False') {
+      if (!defined('CLICSHOPPING_APP_CATALOG_PRODUCTS_PD_STATUS') || CLICSHOPPING_APP_CATALOG_PRODUCTS_PD_STATUS == 'False' || !defined('CONFIGURATION_TINY_API_KEY')) {
         return false;
       }
-      if (!empty(CONFIGURATION_TINY_API_KEY) && defined('CONFIGURATION_TINY_API_KEY')) {
-        $output = '';
 
+      if (!empty(CONFIGURATION_TINY_API_KEY) && defined('CONFIGURATION_TINY_API_KEY')) {
         $content = '<!-- Image TiniFy Hook start -->';
         $content .= '<div class="separator"></div>';
         $content .= '<div class="col-md-12">';
