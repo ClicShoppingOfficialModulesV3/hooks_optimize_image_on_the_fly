@@ -85,7 +85,7 @@
       $Qproducts->bindInt(':products_id', $this->getProductsId());
       $Qproducts->execute();
 
-      if (!empty($Qproducts->value('products_image')) ||!is_null($Qproducts->value('products_image'))) {
+      if (!empty($Qproducts->value('products_image')) ||!\is_null($Qproducts->value('products_image'))) {
           \Tinify\setKey($this->apiKey);
           \Tinify\validate();
 
@@ -154,7 +154,7 @@
 
     public function execute()
     {
-      if (!defined('CLICSHOPPING_APP_CATALOG_PRODUCTS_PD_STATUS') || CLICSHOPPING_APP_CATALOG_PRODUCTS_PD_STATUS == 'False') {
+      if (!\defined('CLICSHOPPING_APP_CATALOG_PRODUCTS_PD_STATUS') || CLICSHOPPING_APP_CATALOG_PRODUCTS_PD_STATUS == 'False') {
         return false;
       }
 
