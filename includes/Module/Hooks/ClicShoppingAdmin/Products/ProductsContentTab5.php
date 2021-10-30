@@ -17,7 +17,7 @@
 
   class ProductsContentTab5
   {
-    protected $app;
+    protected mixed $app;
     protected $InstallAPIKey;
 
     public function __construct()

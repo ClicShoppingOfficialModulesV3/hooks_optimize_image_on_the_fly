@@ -19,9 +19,9 @@
 
   class Save implements \ClicShopping\OM\Modules\HooksInterface
   {
-    protected $app;
+    protected mixed $app;
     protected $id;
-    protected $db;
+    protected mixed $db;
     protected $composer;
 
     public function __construct()
